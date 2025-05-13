@@ -1,0 +1,10 @@
+services:
+  packet_copilot:
+    image: johncapobianco/packet_copilot:packet_copilot
+    container_name: packet_copilot
+    restart: always
+    build: 
+      context: ./
+      dockerfile: ./docker/Dockerfile    
+    ports:
+      - "80:80"
